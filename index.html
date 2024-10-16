@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Awareness & Adoption Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Foundation for Pets</div>
+            <div class="right">
+                <button class="nav-toggle" aria-label="toggle navigation">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Apply</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="leftSection">
+                <h1>Create a <span class="highlight">Better Life</span> for Pets</h1>
+                <p>Every pet deserves a home filled with love. Join our cause and be a part of something amazing.</p>
+                <!-- <a href="adopt.html" class="cta-button" style="text-decoration: none;">Adopt Now</a> -->
+            </div>
+            <div class="rightSection">
+                <img src="pets.jpg" alt="Pets" class="hero-img">
+            </div>
+        </section>
+
+        <!-- Pet Adoption Table Section -->
+        <section class="pet-table">
+            <h2>Meet Our Lovely Pets</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Details</th>
+                        <th>Adopt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="dog1.avif" alt="Dog" class="pet-img"></td>
+                        <td>
+                            <h3>Charlie</h3>
+                            <p>Breed: Golden Retriever</p>
+                            <p>Age: 2 years</p>
+                            <p>Personality: Friendly and playful</p>
+                        </td>
+                        <td><a href="adopt.html" class="cta-button">Adopt Now</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="cat.avif" alt="Cat" class="pet-img"></td>
+                        <td>
+                            <h3>Luna</h3>
+                            <p>Breed: Persian Cat</p>
+                            <p>Age: 1 year</p>
+                            <p>Personality: Calm and affectionate</p>
+                        </td>
+                        <td><a href="adopt.html" class="cta-button">Adopt Now</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="rabbit.avif" alt="Rabbit" class="pet-img"></td>
+                        <td>
+                            <h3>Snowball</h3>
+                            <p>Breed: Netherland Dwarf</p>
+                            <p>Age: 6 months</p>
+                            <p>Personality: Energetic and curious</p>
+                        </td>
+                        <td><a href="adopt.html" class="cta-button">Adopt Now</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        
+        <!-- Contact Section -->
+        <section class="contact" style="margin-left: 360px;">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you! Whether you have questions, want to volunteer, or need more info about adopting a pet, drop us a message.</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+
+
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Us</h2>
+            <p>We rescue abandoned pets and give them a second chance. With your help, we ensure they find loving homes and receive care and support.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Foundation for Pets. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

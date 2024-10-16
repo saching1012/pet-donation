@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f5;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #401874;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(to right, #5f72be, #9b23ea);
+    color: white;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #f1c40f;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+/* Pet Table Section */
+.pet-table {
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.pet-table h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #401874;
+}
+
+.pet-table table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pet-table th, .pet-table td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.pet-table th {
+    background-color: #5e318d;
+    color: white;
+    font-weight: 600;
+}
+
+.pet-table td {
+    vertical-align: top;
+}
+
+.pet-table .pet-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.pet-table a.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #401874;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.pet-table a.cta-button:hover {
+    background-color: #381c5f;
+}
+
+/* Contact Section */
+.contact {
+    width: 80%; /* Adjust width to fit better */
+    max-width: 800px; /* Prevent it from becoming too wide */
+    margin: 50px 300px; /* Center horizontally */
+    padding: 60px;
+    background: linear-gradient(135deg, #401874, #764ba2);
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.contact p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Center items horizontally */
+}
+
+.contact .form-group {
+    display: flex;
+    gap: 20px;
+    width: 100%; /* Ensures inputs fill available space */
+    justify-content: space-between;
+}
+
+.contact input, 
+.contact textarea {
+    width: 100%;
+    max-width: 380px; /* Control the max width of inputs */
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #aaa;
+}
+
+.contact textarea {
+    resize: none;
+}
+
+.cta-button {
+    width: 100%;
+    max-width: 380px;
+    padding: 15px;
+    background-color: #f4a261;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #e76f51;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact .form-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pet-table table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .pet-table th, .pet-table td {
+        display: block;
+        text-align: center;
+    }
+
+    .pet-table .pet-img {
+        margin: 0 auto 10px;
+    }
+}
+
+
+.cta-button {
+    padding: 10px 25px;
+    background-color: #f1c40f;
+    color: #401874;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+}
+
+.hero-img {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+.about {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #401874;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #34165e;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #401874;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}

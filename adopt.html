@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Form</title>
+    <link rel="stylesheet" href="adopt.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Foundation for Pets</div>
+            <a href="index.html" class="back-button">⬅ Home</a>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <h1>Adopt a Pet</h1>
+        <p>Fill out the form below to start the adoption process!</p>
+
+        <form action="#" method="POST" class="adopt-form">
+            <input type="text" name="full_name" placeholder="Your Full Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="phone" placeholder="Your Phone Number" required>
+            
+            <select name="pet_type" required>
+                <option value="" disabled selected>Select Pet Type</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="other">Other</option>
+            </select>
+
+            <textarea name="message" rows="5" placeholder="Why do you want to adopt a pet?" required></textarea>
+            
+            <button type="submit" class="cta-button">Submit Application</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Foundation for Pets. All rights reserved.</p>
+    </footer>
+</body>
+</html>
