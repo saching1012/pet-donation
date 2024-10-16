@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +6,11 @@
 }
 
 body {
-    background-color: #f0f0f5;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
     color: #333;
-    font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
+    line-height: 1.6;
 }
 
 /* Navbar Styles */
@@ -16,36 +18,43 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #401874;
-    color: white;
+    background: linear-gradient(135deg, #401874, #6c5ce7);
+    padding: 15px 30px;
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
+nav .left {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
 .nav-links {
+    list-style: none;
     display: flex;
     gap: 20px;
-    list-style: none;
+    transition: all 0.3s ease-in-out;
 }
 
-.nav-links li a {
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.nav-links a {
     text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.nav-links li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .nav-toggle {
     display: none;
     font-size: 2rem;
     cursor: pointer;
+    color: black;
 }
 
 /* Hero Section */
@@ -54,290 +63,248 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    background: linear-gradient(to right, #5f72be, #9b23ea);
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
     border-radius: 10px;
-    margin: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.highlight {
-    color: #f1c40f;
+    margin-bottom: 20px;
 }
 
 .hero p {
     margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero img {
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f1c40f;
+    color: #401874;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
 }
 
 /* Pet Table Section */
 .pet-table {
     margin: 50px auto;
-    max-width: 900px;
+    max-width: 1000px;
     text-align: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .pet-table h2 {
-    margin-bottom: 20px;
     font-size: 2rem;
+    margin-bottom: 20px;
     color: #401874;
 }
 
 .pet-table table {
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
-.pet-table th, .pet-table td {
+.pet-table th, 
+.pet-table td {
     padding: 20px;
-    text-align: left;
     border-bottom: 1px solid #ddd;
+    text-align: left;
 }
 
 .pet-table th {
-    background-color: #5e318d;
+    background-color: #6c5ce7;
     color: white;
     font-weight: 600;
 }
 
-.pet-table td {
-    vertical-align: top;
-}
-
-.pet-table .pet-img {
+.pet-table img {
     width: 100px;
     height: 100px;
-    border-radius: 10px;
     object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
 }
 
-.pet-table a.cta-button {
-    display: inline-block;
+.pet-table a {
     padding: 10px 20px;
     background-color: #401874;
     color: white;
-    text-align: center;
-    border-radius: 5px;
     text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.pet-table a.cta-button:hover {
-    background-color: #381c5f;
+.pet-table a:hover {
+    background-color: #5e318d;
 }
 
 /* Contact Section */
 .contact {
-    width: 80%; /* Adjust width to fit better */
-    max-width: 800px; /* Prevent it from becoming too wide */
-    margin: 50px 300px; /* Center horizontally */
-    padding: 60px;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 40px;
     background: linear-gradient(135deg, #401874, #764ba2);
     color: white;
     text-align: center;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
-    color: #f2f2f2;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.contact p {
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .contact form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center; /* Center items horizontally */
-}
-
-.contact .form-group {
-    display: flex;
-    gap: 20px;
-    width: 100%; /* Ensures inputs fill available space */
-    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .contact input, 
 .contact textarea {
     width: 100%;
-    max-width: 380px; /* Control the max width of inputs */
     padding: 15px;
+    margin: 10px;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
-    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact input::placeholder,
-.contact textarea::placeholder {
-    color: #aaa;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contact textarea {
     resize: none;
 }
 
-.cta-button {
-    width: 100%;
-    max-width: 380px;
+.contact button {
     padding: 15px;
     background-color: #f4a261;
-    color: white;
+    color: black;
     font-size: 1.1rem;
-    font-weight: bold;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    transition: background 0.3s;
 }
 
-.cta-button:hover {
+.contact button:hover {
     background-color: #e76f51;
-    transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact .form-group {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .pet-table table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    .pet-table th, .pet-table td {
-        display: block;
-        text-align: center;
-    }
-
-    .pet-table .pet-img {
-        margin: 0 auto 10px;
-    }
-}
-
-
-.cta-button {
-    padding: 10px 25px;
-    background-color: #f1c40f;
-    color: #401874;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #e67e22;
-}
-
-.hero-img {
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* About Section */
 .about {
-    padding: 40px;
+    margin: 50px auto;
+    max-width: 800px;
     text-align: center;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Section */
-.contact {
+    background-color: white;
     padding: 40px;
-    text-align: center;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.contact button {
-    padding: 10px 20px;
-    background-color: #401874;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact button:hover {
-    background-color: #34165e;
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #401874;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #401874;
     color: white;
+    margin-top: 30px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
     }
 
-    nav ul {
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        right: 10px; /* Align the menu to the right */
+        background-color: #40276b;
         flex-direction: column;
-        display: none;
+        gap: 10px;
+        padding: 15px;
+        border-radius: 5px;
+        transform: scaleY(0); /* Initially hidden */
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: scaleY(1); /* Expand vertically */
     }
 
     .nav-toggle {
         display: block;
+        position: absolute;
+        background-color: #6653D7;
+        border: none;
+        color: white;
+        right: 20px; /* Ensure it stays on the right */
+        top: 15px;
     }
 
-    .nav-links.active {
-        display: flex;
+    nav {
+        position: relative;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .hero img {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .pet-table th, 
+    .pet-table td {
+        text-align: center;
+        display: block;
+    }
+
+    .pet-table img {
+        margin: 0 auto 10px;
+    }
+
+    .contact {
+        width: 90%;
     }
 }
